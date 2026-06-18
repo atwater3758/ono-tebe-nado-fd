@@ -1,6 +1,4 @@
 body {
-  margin: 0;
-  padding: 0;
   font-family: Raleway, sans-serif;
   font-weight: 400;
   background-color: #f5f5f5;
@@ -39,21 +37,18 @@ body {
   height: 105px;
 }
 .address {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 240px;
+  font-family: 'Raleway';
+  font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  font-style: normal;
-  line-height: 24.3px;
+  line-height: 24px;
   text-decoration: none;
   text-underline-offset: 4px;
-  list-style-type: none;
 }
 
 .header__address {
-  list-style-type: none;
+  justify-self: end;
+  width: 240px;
 }
 
 .cover {
@@ -95,6 +90,7 @@ body {
 .aligned-text {  
   display: block;
   flex-wrap: nowrap;
+  margin-right: -50px;
  }
 
 .aligned-text_left { 
@@ -107,19 +103,18 @@ body {
 
 .aligned-text_right { 
   text-align: right;
-  margin-right: -20px;
 }
 .no-letter-spacing {
   letter-spacing: 0;
 }
 
 .cover__description {
-  flex: 0 0 auto; /* Фиксированная высота блока */
-  margin-top: auto; /* Прижимает блок к низу контейнера */
+  flex: 0 0 auto; 
+  margin-top: auto; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px; /* Расстояние между текстом и кнопкой */
+  gap: 30px;
   padding: 50px 50px;
   z-index: 2;
 }
@@ -153,7 +148,6 @@ body {
 .lots {
   width: 1052px;
   margin: 180px 24px 120px 24px;
-
 }
 
 .lots__heading {
@@ -190,7 +184,7 @@ body {
 }
 
 .card__title {
-  z-index: +1;
+  z-index: 2;
   margin-top: 48px;
   margin-right: 40px;
   margin-left: 40px;
@@ -205,7 +199,7 @@ body {
 }
 
 .card__text {
-  z-index: +1;
+  z-index: 2;
   flex-direction: column;
   justify-content: end;
   margin: auto 40px 48px 40px;
@@ -306,21 +300,19 @@ body {
 
 .footer {
   display: grid;
-  grid-template-columns: 270px 2fr 270px;
+  grid-template-columns: repeat(3, 1fr); 
   align-content: start;
+  justify-content: space-around;
   width: 1100px;
   padding: 0 50px;
-  background-color: aqua;
 }
+
 .footer__address {
-  margin-left: 0;
+  width: 264px;
 }
 
 .footer__menu-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: -16px;
+  text-align: center;
   color: #000000;
   font-size: 18px;
   line-height: 21px;
@@ -332,14 +324,15 @@ body {
 }
 
 .footer__social-list {
+  list-style-type: none;
   display: flex;
-  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
   gap: 48px;
-  width: 240px;
-  margin-top: 6px;
-  list-style: none;
 }
 
 .footer__social-icon {
-  size: 48px 48px;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
